@@ -5,7 +5,7 @@ pipeline {
         stage ('Build Image') {
             steps {
                 script {
-                    dockerapp = docker.build("davescott99/astroflix-discovery-service:${env.BUILD_ID}", "-f ./Dockerfile ./discovery")
+                    dockerapp = docker.build("davescott99/astfx-discserv:${env.BUILD_ID}", "-f ./Dockerfile ./")
                 }
             }
         }
