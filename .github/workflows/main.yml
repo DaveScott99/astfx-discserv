@@ -24,7 +24,6 @@ jobs:
         file: ./Dockerfile
         push: true
         tags: |
-          davescott99/astfx-discserv:v1.1-a
           davescott99/astfx-discserv:latest
           
         
