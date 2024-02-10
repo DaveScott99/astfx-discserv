@@ -1,6 +1,6 @@
-FROM openjdk:17
+FROM eclipse-temurin:17-jre-alpine
 LABEL authors="Davi Santos"
-ARG JAR_FILE=target/*.jar
-ADD ${JAR_FILE} app.jar
-EXPOSE 8761
-ENTRYPOINT ["java", "-jar", "/app.jar"]
+WORKDIR /app
+COPY target/discovery-1.1.5.jar discovery-1.1.5.jar
+EXPOSE 8763
+CMD ["java", "-jar", "discovery-1.1.5.jar"]
